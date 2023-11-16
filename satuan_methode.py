@@ -23,8 +23,11 @@ def view_column_names(df):
 
 # Fungsi untuk melihat dimensi DataFrame
 def view_dimensions(df):
-    jumlah_baris, jumlah_kolom = df.shape
-    return jumlah_baris, jumlah_kolom
+    if df is None or df.empty:
+        return 0, 0
+    else:
+        jumlah_baris, jumlah_kolom = df.shape
+        return jumlah_baris, jumlah_kolom
 
 # Fungsi untuk menghapus kolom
 def remove_columns(df, columns_to_remove):
@@ -40,7 +43,7 @@ def find_unique_values(df):
 
 # Halaman utama aplikasi Streamlit
 def main():
-    st.title("Aplikasi Analisis Data Sederhana Bebasis Web")
+    st.title("Aplikasi Analisis Data CSV")
 
     # Mengunggah file CSV
     uploaded_file = st.file_uploader("Unggah File CSV", type=["csv"])
@@ -158,3 +161,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
