@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
 
 # Fungsi untuk analisis tipe data
 def analyze_data_types(df):
