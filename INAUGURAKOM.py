@@ -9,7 +9,7 @@ def display_home():
     # Add content for home page here
 
 def display_data_input():
-    st.title('Daftar Hadir Tamu INAUURAKOM 2023')
+    st.title('Registrasi Hadir Tamu INAUURAKOM 2023')
     if 'csv_created' not in st.session_state:
         st.session_state.csv_created = False
 
